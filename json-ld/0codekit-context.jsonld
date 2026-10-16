@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "@vocab": "https://0codekit.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "0codekit": "https://0codekit.com/schema#",
+    "PostAiPdfocrRequest": "0codekit:PostAiPdfocrRequest",
+    "pdfUrl": {
+      "@id": "0codekit:pdfUrl",
+      "@type": "xsd:string"
+    },
+    "PostAiPdfocrResponse": "0codekit:PostAiPdfocrResponse",
+    "recognizedText": {
+      "@id": "0codekit:recognizedText",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "0codekit:status",
+      "@type": "xsd:decimal"
+    },
+    "errorMessage": {
+      "@id": "0codekit:errorMessage",
+      "@type": "xsd:string"
+    },
+    "GetDocsResponse": "0codekit:GetDocsResponse",
+    "PostImageImageidRequest": "0codekit:PostImageImageidRequest",
+    "url": {
+      "@id": "0codekit:url",
+      "@type": "xsd:string"
+    },
+    "buffer": {
+      "@id": "0codekit:buffer",
+      "@type": "xsd:string"
+    },
+    "sigma": {
+      "@id": "0codekit:sigma",
+      "@type": "xsd:decimal"
+    },
+    "getAsUrl": {
+      "@id": "0codekit:getAsUrl",
+      "@type": "xsd:boolean"
+    },
+    "fileName": {
+      "@id": "0codekit:fileName",
+      "@type": "xsd:string"
+    },
+    "PostImageImageidResponse": "0codekit:PostImageImageidResponse",
+    "GetMcpResponse": "0codekit:GetMcpResponse",
+    "GetMcpListResponse": "0codekit:GetMcpListResponse",
+    "PostMcpMcpidRequest": "0codekit:PostMcpMcpidRequest",
+    "endpoint": {
+      "@id": "0codekit:endpoint",
+      "@type": "xsd:string"
+    },
+    "body": {
+      "@id": "0codekit:body"
+    },
+    "PostMcpMcpidResponse": "0codekit:PostMcpMcpidResponse",
+    "PostPdfPdfidRequest": "0codekit:PostPdfPdfidRequest",
+    "PostPdfPdfidResponse": "0codekit:PostPdfPdfidResponse",
+    "pageCount": {
+      "@id": "0codekit:pageCount",
+      "@type": "xsd:decimal"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "relyon API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects relyon's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-15) from openapi/_ae-authored/0codekit-openapi-generated.yml.",
+  "dcterms:created": "2026-10-15",
+  "dcterms:source": [
+    "openapi/_ae-authored/0codekit-openapi-generated.yml"
+  ]
+}

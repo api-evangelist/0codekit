@@ -1,0 +1,49 @@
+generated: '2026-10-16'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/0codekit-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.0codekit.com, 0codekit.com, dev.0codekit.com, docs.0codekit.com;
+  verdict absent. Candidate tools below are derived from the 7 operation(s) in the provider's own OpenAPI (7 listed); they describe what a server
+  WOULD expose, not one that exists.
+tools:
+- name: post_ai_pdfocr
+  operationId: post_ai_pdfocr
+  method: POST
+  path: /ai/pdfocr
+  description: PDF Optical Character Recognition.
+- name: get_docs
+  operationId: get_docs
+  method: GET
+  path: /docs
+  description: 'DEPRECATED: Get OpenAPI documentation.'
+- name: post_image_imageid
+  operationId: post_image_imageid
+  method: POST
+  path: /image/{imageid}
+  description: Blur an image.
+- name: get_mcp
+  operationId: get_mcp
+  method: GET
+  path: /mcp
+  description: Establish MCP SSE connection.
+- name: get_mcp_list
+  operationId: get_mcp_list
+  method: GET
+  path: /mcp/list
+  description: List all 0CodeKit endpoints.
+- name: post_mcp_mcpid
+  operationId: post_mcp_mcpid
+  method: POST
+  path: /mcp/{mcpid}
+  description: Call 0CodeKit endpoint.
+- name: post_pdf_pdfid
+  operationId: post_pdf_pdfid
+  method: POST
+  path: /pdf/{pdfid}
+  description: Count PDF pages.

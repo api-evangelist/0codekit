@@ -1,23 +1,130 @@
 aid: 0codekit
+
 name: relyon
-description: 'relyon is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/679e16442439d38e1efcc5c3/6867a7a1afbfac5e2a872223_Tutorial%20013.png
+
+description: Relyon, operating under the brand 0CodeKit, offers a low‑code and no‑code platform enabling users to convert PDFs, execute code snippets,
+  and integrate AI services without extensive programming. The suite includes PDF conversion, OCR, code execution in Python and JavaScript, image
+  manipulation, and transcription tools, targeting tech‑savvy professionals and developers seeking rapid prototyping and automation.
+
 url: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-15 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-15'
+
 modified: '2026-10-15'
+
 tags:
 - Company
-apis: []
+- Low-Code
+- No-Code
+- PDF Tools
+- AI Integration
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/0codekit-plans-pricing.yml
+- type: Spectral
+  url: rules/0codekit-rules.yml
+- type: JSONLD
+  url: json-ld/0codekit-context.jsonld
+- type: Vocabulary
+  url: vocabulary/0codekit-vocabulary.yml
+- type: DataModel
+  url: data-model/0codekit-data-model.yml
+- type: Authentication
+  url: authentication/0codekit-authentication.yml
+- type: Conformance
+  url: conformance/0codekit-conformance.yml
+- type: SecurityTxt
+  url: well-known/0codekit-prod-security.txt
+- type: SecurityTxt
+  url: well-known/0codekit-my-security.txt
+- type: WellKnown
+  url: well-known/0codekit-well-known.yml
+- type: Hosts
+  url: hosts/0codekit-hosts.yml
+- type: Vendors
+  url: vendors/0codekit-vendors.yml
+- type: Support
+  url: https://www.0codekit.com/support
+- type: Login
+  url: https://my.0codekit.com/en/auth/login
+- type: GitHubOrganization
+  url: https://github.com/0codekit
+- type: GettingStarted
+  url: https://docs.0codekit.com/category/getting-started/
+- type: DomainSecurity
+  url: security/0codekit-domain-security.yml
 - type: Website
-  url: https://0codekit.com/
+  url: https://www.0codekit.com/
+- type: Documentation
+  url: https://docs.0codekit.com/
+- type: Blog
+  url: https://www.0codekit.com/blog
+- type: Pricing
+  url: https://www.0codekit.com/pricing
+- type: TermsOfService
+  url: https://www.0codekit.com/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.0codekit.com/legal/privacy-policy
+
+apis:
+- name: 0CodeKit API
+  description: API for 0CodeKit low-code platform
+  humanURL: https://docs.0codekit.com/api/0-codekit-api/
+  aid: 0codekit:0codekit-api-2
+- aid: 0codekit:0codekit-api
+  name: relyon API
+  description: 'relyon API as documented publicly: 7 operations. Contract generated from the documentation by API Evangelist (2026-10-15); not
+
+    the provider''s own document.'
+  humanURL: https://docs.0codekit.com/api/mcp-get
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/0codekit-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/0codekit-post-image-imageid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-ai-pdfocr-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-docs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-mcp-list-response-schema.json
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-15'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://0codekit.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-15'
+  status: enriched
+  artifacts_added: 22
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

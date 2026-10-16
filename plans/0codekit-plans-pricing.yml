@@ -1,0 +1,46 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.0codekit.com/pricing
+sources:
+- https://www.0codekit.com/pricing
+name: relyon pricing
+audience: developer-api
+pricing_basis: per-seat
+plans:
+- name: Free
+  price_text: $0 /month
+  price: 0
+  billing_period: monthly
+  description: Free forever
+- name: Starter
+  price_text: $7 /month
+  price: 7
+  billing_period: yearly
+  description: Billed annually
+- name: Professional
+  price_text: $19 /month
+  price: 19
+  billing_period: yearly
+  description: Billed annually
+- name: Company
+  price_text: $99 /month
+  price: 99
+  billing_period: yearly
+  description: Billed annually
+- name: Enterprise
+  price_text: Contact us
+  description: Custom plan
+- name: Starter
+  price_text: $10 /month
+  price: 10
+  billing_period: monthly
+- name: Professional
+  price_text: $25 /month
+  price: 25
+  billing_period: monthly
+- name: Company
+  price_text: $109 /month
+  price: 109
+  billing_period: monthly
+docs: https://www.0codekit.com/pricing

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/0codekit/main/json-schema/0codekit-post-pdf-pdfid-response-schema.json",
+  "title": "PostPdfPdfidResponse",
+  "x-generated": "2026-10-15",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/0codekit-openapi-generated.yml#/components/schemas/PostPdfPdfidResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "string",
+      "description": "Success"
+    },
+    "pageCount": {
+      "type": "number",
+      "description": "The number of pages in the PDF."
+    },
+    "400": {
+      "type": "string",
+      "description": "Bad Request"
+    },
+    "status": {
+      "type": "number",
+      "description": "status"
+    },
+    "errorMessage": {
+      "type": "string",
+      "description": "errorMessage"
+    }
+  }
+}

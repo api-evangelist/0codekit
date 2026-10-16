@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/0codekit/main/json-schema/0codekit-post-pdf-pdfid-request-schema.json",
+  "title": "PostPdfPdfidRequest",
+  "x-generated": "2026-10-15",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/0codekit-openapi-generated.yml#/components/schemas/PostPdfPdfidRequest",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "The PDF URL."
+    },
+    "buffer": {
+      "type": "string",
+      "description": "The PDF as a Base64-encoded buffer. Can be specified instead of url."
+    }
+  },
+  "required": [
+    "url"
+  ]
+}

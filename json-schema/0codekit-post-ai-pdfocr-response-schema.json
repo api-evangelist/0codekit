@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/0codekit/main/json-schema/0codekit-post-ai-pdfocr-response-schema.json",
+  "title": "PostAiPdfocrResponse",
+  "x-generated": "2026-10-15",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/0codekit-openapi-generated.yml#/components/schemas/PostAiPdfocrResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "object",
+      "description": "Success response containing recognized text."
+    },
+    "recognizedText": {
+      "type": "string",
+      "description": "The text that was recognized in the PDF."
+    },
+    "400": {
+      "type": "object",
+      "description": "Bad Request response."
+    },
+    "status": {
+      "type": "number"
+    },
+    "errorMessage": {
+      "type": "string"
+    }
+  }
+}

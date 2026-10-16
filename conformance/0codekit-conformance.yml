@@ -1,0 +1,23 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.0codekit.com/main/about-us/gdpr/
+sources:
+- https://docs.0codekit.com/main/about-us/gdpr/
+standards:
+- id: gdpr
+  conforms: true
+  evidence: We apply to GDPR since we are an EU-based company.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: ipaas (apiKey)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://docs.0codekit.com/main/about-us/gdpr/

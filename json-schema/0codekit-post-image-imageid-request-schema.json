@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/0codekit/main/json-schema/0codekit-post-image-imageid-request-schema.json",
+  "title": "PostImageImageidRequest",
+  "x-generated": "2026-10-15",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/0codekit-openapi-generated.yml#/components/schemas/PostImageImageidRequest",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "The image URL"
+    },
+    "buffer": {
+      "type": "string",
+      "description": "The image as a Base64-encoded buffer. Can be specified instead of url."
+    },
+    "sigma": {
+      "type": "number",
+      "description": "How strongly the image will be blurred. Possible values: >= 0.3 and <= 1000"
+    },
+    "getAsUrl": {
+      "type": "boolean",
+      "description": "Whether the result image should be returned as a URL. Default is false."
+    },
+    "fileName": {
+      "type": "string",
+      "description": "The file name of the result image. Default is a random ID."
+    }
+  }
+}

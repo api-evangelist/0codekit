@@ -1,0 +1,32 @@
+generated: '2026-10-15'
+method: probed
+source: https://www.0codekit.com/legal/privacy-policy
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://www.0codekit.com/legal/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "Should you have questions concerning this policy or wish to exercise your privacy rights under GDPR, please contact us via the email above."
+    note: Provides a mechanism for data subjects to exercise their rights.
+  data_residency:
+    evidence:
+      - source: https://www.0codekit.com/legal/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "All data collected and processed through 0CodeKit is securely stored and processed exclusively on servers located within the European Union (EU) to ensure strict compliance with GDPR requirements."
+    note: Data is stored within the EU.
+  incident_notification:
+    evidence:
+      - source: https://www.0codekit.com/legal/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "Structured incident management protocol for rapid identification and response"
+    note: Describes incident response procedures.
+  data_retention:
+    evidence:
+      - source: https://www.0codekit.com/legal/privacy-policy
+        http_status: 200
+        fetched: /tmp/privacy.html
+        quote: "We retain your personal data only as long as strictly necessary for the fulfillment of our stated business purposes or where required by applicable law. When retention is no longer necessary or mandated, your data will be promptly deleted or fully anonymized."
+    note: States retention period policy.

@@ -1,0 +1,354 @@
+openapi: 3.1.0
+info:
+  title: relyon API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 7 operation(s) read from 15 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; relyon has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 7
+    pages-with-code: 0
+    pages-read: 15
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.0codekit.com/api/mcp-get
+  - https://docs.0codekit.com/api/docs-get
+  - https://docs.0codekit.com/api/mcp-list-get
+  - https://docs.0codekit.com/api/mcp-call-post
+  - https://docs.0codekit.com/api/mcp-info-post
+  - https://docs.0codekit.com/api/pdf-html-post
+  - https://docs.0codekit.com/api/ai-pdfocr-post
+  - https://docs.0codekit.com/api/pdf-count-post
+  - https://docs.0codekit.com/api/pdf-merge-post
+  - https://docs.0codekit.com/api/pdf-split-post
+  - https://docs.0codekit.com/api/image-blur-post
+  - https://docs.0codekit.com/api/image-crop-post
+  - https://docs.0codekit.com/api/image-exif-post
+  - https://docs.0codekit.com/api/image-flip-post
+  - https://docs.0codekit.com/api/image-html-post
+paths:
+  /ai/pdfocr:
+    post:
+      operationId: post_ai_pdfocr
+      tags:
+      - Ai
+      summary: PDF Optical Character Recognition.
+      x-source: https://docs.0codekit.com/api/ai-pdfocr-post
+      parameters:
+      - name: ipaas
+        in: header
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAiPdfocrRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAiPdfocrResponse'
+      x-evidence:
+        kind: documentation
+  /docs:
+    get:
+      operationId: get_docs
+      tags:
+      - Docs
+      summary: 'DEPRECATED: Get OpenAPI documentation.'
+      description: This endpoint is deprecated, please use /openapi.json instead.
+      x-source: https://docs.0codekit.com/api/docs-get
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetDocsResponse'
+      x-evidence:
+        kind: documentation
+  /image/{imageid}:
+    post:
+      operationId: post_image_imageid
+      tags:
+      - Image
+      summary: Blur an image.
+      x-source: https://docs.0codekit.com/api/image-blur-post
+      parameters:
+      - name: imageid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: ipaas
+        in: header
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostImageImageidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostImageImageidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 5 example path(s) differing only at imageId
+  /mcp:
+    get:
+      operationId: get_mcp
+      tags:
+      - Mcp
+      summary: Establish MCP SSE connection.
+      description: This endpoint is used to establish an SSE connection for the Model Context Protocol (MCP). It immediately returns an endpoint
+        event with the URL to POST messages to. Responses will be delivered to the SSE connection.
+      x-source: https://docs.0codekit.com/api/mcp-get
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMcpResponse'
+      x-evidence:
+        kind: documentation
+  /mcp/list:
+    get:
+      operationId: get_mcp_list
+      tags:
+      - Mcp
+      summary: List all 0CodeKit endpoints.
+      x-source: https://docs.0codekit.com/api/mcp-list-get
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMcpListResponse'
+      x-evidence:
+        kind: documentation
+  /mcp/{mcpid}:
+    post:
+      operationId: post_mcp_mcpid
+      tags:
+      - Mcp
+      summary: Call 0CodeKit endpoint.
+      x-source: https://docs.0codekit.com/api/mcp-call-post
+      parameters:
+      - name: mcpid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostMcpMcpidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostMcpMcpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at mcpId
+  /pdf/{pdfid}:
+    post:
+      operationId: post_pdf_pdfid
+      tags:
+      - Pdf
+      summary: Count PDF pages.
+      x-source: https://docs.0codekit.com/api/pdf-count-post
+      parameters:
+      - name: pdfid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: ipaas
+        in: header
+        required: false
+        schema:
+          type: string
+        description: ipaas
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostPdfPdfidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostPdfPdfidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at pdfId
+components:
+  schemas:
+    PostAiPdfocrRequest:
+      type: object
+      properties:
+        pdfUrl:
+          type: string
+          description: PDF URL.
+      required:
+      - pdfUrl
+    PostAiPdfocrResponse:
+      type: object
+      properties:
+        '200':
+          type: object
+          description: Success response containing recognized text.
+        recognizedText:
+          type: string
+          description: The text that was recognized in the PDF.
+        '400':
+          type: object
+          description: Bad Request response.
+        status:
+          type: number
+        errorMessage:
+          type: string
+    GetDocsResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+    PostImageImageidRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          description: The image URL
+        buffer:
+          type: string
+          description: The image as a Base64-encoded buffer. Can be specified instead of url.
+        sigma:
+          type: number
+          description: 'How strongly the image will be blurred. Possible values: >= 0.3 and <= 1000'
+        getAsUrl:
+          type: boolean
+          description: Whether the result image should be returned as a URL. Default is false.
+        fileName:
+          type: string
+          description: The file name of the result image. Default is a random ID.
+    PostImageImageidResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+    GetMcpResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+    GetMcpListResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+    PostMcpMcpidRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+        body:
+          type: object
+      required:
+      - endpoint
+      - body
+    PostMcpMcpidResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+    PostPdfPdfidRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          description: The PDF URL.
+        buffer:
+          type: string
+          description: The PDF as a Base64-encoded buffer. Can be specified instead of url.
+      required:
+      - url
+    PostPdfPdfidResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        pageCount:
+          type: number
+          description: The number of pages in the PDF.
+        '400':
+          type: string
+          description: Bad Request
+        status:
+          type: number
+          description: status
+        errorMessage:
+          type: string
+          description: errorMessage
+  securitySchemes:
+    ipaas:
+      type: apiKey
+      in: header
+      name: ipaas
+      x-source: https://docs.0codekit.com/main/api-keys/
+tags:
+- name: Ai
+- name: Docs
+- name: Image
+- name: Mcp
+- name: Pdf
+security:
+- ipaas: []

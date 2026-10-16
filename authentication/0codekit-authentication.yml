@@ -1,0 +1,17 @@
+generated: '2026-10-15'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.0codekit.com/main/api-keys/
+sources:
+- https://docs.0codekit.com/main/api-keys/
+- https://docs.0codekit.com/api/1-saas-auth-post/
+- https://docs.0codekit.com/category/getting-started/
+- https://docs.0codekit.com/main/getting-started/make/
+description: Authentication schemes for relyon
+schemes:
+- type: apiKey
+  name: ipaas
+  evidence: Header Parameters ipaas string
+  location: header
+  header: ipaas
+docs: https://docs.0codekit.com/main/api-keys/
