@@ -1,0 +1,144 @@
+openapi: 3.2.0
+info:
+  title: relyon MCP API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 7 operation(s) read from 15 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; relyon has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 7
+    pages-with-code: 0
+    pages-read: 15
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.0codekit.com/api/mcp-get
+  - https://docs.0codekit.com/api/docs-get
+  - https://docs.0codekit.com/api/mcp-list-get
+  - https://docs.0codekit.com/api/mcp-call-post
+  - https://docs.0codekit.com/api/mcp-info-post
+  - https://docs.0codekit.com/api/pdf-html-post
+  - https://docs.0codekit.com/api/ai-pdfocr-post
+  - https://docs.0codekit.com/api/pdf-count-post
+  - https://docs.0codekit.com/api/pdf-merge-post
+  - https://docs.0codekit.com/api/pdf-split-post
+  - https://docs.0codekit.com/api/image-blur-post
+  - https://docs.0codekit.com/api/image-crop-post
+  - https://docs.0codekit.com/api/image-exif-post
+  - https://docs.0codekit.com/api/image-flip-post
+  - https://docs.0codekit.com/api/image-html-post
+security:
+- ipaas: []
+tags:
+- name: MCP
+paths:
+  /mcp:
+    get:
+      operationId: get_mcp
+      tags:
+      - MCP
+      summary: Establish MCP SSE connection
+      description: This endpoint is used to establish an SSE connection for the Model Context Protocol (MCP). It immediately returns an endpoint event with the URL to POST messages to. Responses will be delivered to the SSE connection.
+      x-source: https://docs.0codekit.com/api/mcp-get
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMcpResponse'
+      x-evidence:
+        kind: documentation
+  /mcp/list:
+    get:
+      operationId: get_mcp_list
+      tags:
+      - MCP
+      summary: List all 0CodeKit endpoints
+      x-source: https://docs.0codekit.com/api/mcp-list-get
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMcpListResponse'
+      x-evidence:
+        kind: documentation
+  /mcp/{mcpid}:
+    post:
+      operationId: post_mcp_mcpid
+      tags:
+      - MCP
+      summary: Call 0CodeKit endpoint
+      x-source: https://docs.0codekit.com/api/mcp-call-post
+      parameters:
+      - name: mcpid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostMcpMcpidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostMcpMcpidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at mcpId
+components:
+  schemas:
+    PostMcpMcpidRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+        body:
+          type: object
+      required:
+      - endpoint
+      - body
+    PostMcpMcpidResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+    GetMcpListResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+    GetMcpResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+  securitySchemes:
+    ipaas:
+      type: apiKey
+      in: header
+      name: ipaas
+      x-source: https://docs.0codekit.com/main/api-keys/

@@ -89,16 +89,15 @@ apis:
   description: API for 0CodeKit low-code platform
   humanURL: https://docs.0codekit.com/api/0-codekit-api/
   aid: 0codekit:0codekit-api-2
-- aid: 0codekit:0codekit-api
-  name: relyon API
-  description: 'relyon API as documented publicly: 7 operations. Contract generated from the documentation by API Evangelist (2026-10-15); not
-
-    the provider''s own document.'
-  humanURL: https://docs.0codekit.com/api/mcp-get
+- aid: 0codekit:0codekit-ai-api
+  name: relyon AI API
+  description: The Ai API from relyon — 1 operation(s) for ai.
+  humanURL: https://docs.0codekit.com/api/0-codekit-api/
+  tags:
+  - Ai
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/0codekit-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/0codekit-ai-api-openapi.yml
   - type: JSONSchema
     url: json-schema/0codekit-post-image-imageid-request-schema.json
   - type: JSONSchema
@@ -111,7 +110,90 @@ apis:
     url: json-schema/0codekit-get-docs-response-schema.json
   - type: JSONSchema
     url: json-schema/0codekit-get-mcp-list-response-schema.json
-
+- aid: 0codekit:0codekit-docs-api
+  name: relyon Docs API
+  description: The Docs API from relyon — 1 operation(s) for docs.
+  humanURL: https://docs.0codekit.com/api/0-codekit-api/
+  tags:
+  - Docs
+  properties:
+  - type: OpenAPI
+    url: openapi/0codekit-docs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/0codekit-post-image-imageid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-ai-pdfocr-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-docs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-mcp-list-response-schema.json
+- aid: 0codekit:0codekit-image-api
+  name: relyon Image API
+  description: The Image API from relyon — 1 operation(s) for image.
+  humanURL: https://docs.0codekit.com/api/0-codekit-api/
+  tags:
+  - Image
+  properties:
+  - type: OpenAPI
+    url: openapi/0codekit-image-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/0codekit-post-image-imageid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-ai-pdfocr-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-docs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-mcp-list-response-schema.json
+- aid: 0codekit:0codekit-mcp-api
+  name: relyon MCP API
+  description: The Mcp API from relyon — 3 operation(s) for mcp.
+  humanURL: https://docs.0codekit.com/api/0-codekit-api/
+  tags:
+  - Mcp
+  properties:
+  - type: OpenAPI
+    url: openapi/0codekit-mcp-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/0codekit-post-image-imageid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-ai-pdfocr-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-docs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-mcp-list-response-schema.json
+- aid: 0codekit:0codekit-pdf-api
+  name: relyon PDF API
+  description: The Pdf API from relyon — 1 operation(s) for pdf.
+  humanURL: https://docs.0codekit.com/api/0-codekit-api/
+  tags:
+  - Pdf
+  properties:
+  - type: OpenAPI
+    url: openapi/0codekit-pdf-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/0codekit-post-image-imageid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-ai-pdfocr-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-post-pdf-pdfid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-docs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/0codekit-get-mcp-list-response-schema.json
 x-coverage:
   state: none
   reason: no-developer-program

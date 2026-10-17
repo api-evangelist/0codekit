@@ -1,0 +1,97 @@
+openapi: 3.2.0
+info:
+  title: relyon AI API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 7 operation(s) read from 15 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; relyon has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 7
+    pages-with-code: 0
+    pages-read: 15
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.0codekit.com/api/mcp-get
+  - https://docs.0codekit.com/api/docs-get
+  - https://docs.0codekit.com/api/mcp-list-get
+  - https://docs.0codekit.com/api/mcp-call-post
+  - https://docs.0codekit.com/api/mcp-info-post
+  - https://docs.0codekit.com/api/pdf-html-post
+  - https://docs.0codekit.com/api/ai-pdfocr-post
+  - https://docs.0codekit.com/api/pdf-count-post
+  - https://docs.0codekit.com/api/pdf-merge-post
+  - https://docs.0codekit.com/api/pdf-split-post
+  - https://docs.0codekit.com/api/image-blur-post
+  - https://docs.0codekit.com/api/image-crop-post
+  - https://docs.0codekit.com/api/image-exif-post
+  - https://docs.0codekit.com/api/image-flip-post
+  - https://docs.0codekit.com/api/image-html-post
+security:
+- ipaas: []
+tags:
+- name: AI
+paths:
+  /ai/pdfocr:
+    post:
+      operationId: post_ai_pdfocr
+      tags:
+      - AI
+      summary: PDF Optical Character Recognition
+      x-source: https://docs.0codekit.com/api/ai-pdfocr-post
+      parameters:
+      - name: ipaas
+        in: header
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAiPdfocrRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAiPdfocrResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostAiPdfocrRequest:
+      type: object
+      properties:
+        pdfUrl:
+          type: string
+          description: PDF URL.
+      required:
+      - pdfUrl
+    PostAiPdfocrResponse:
+      type: object
+      properties:
+        '200':
+          type: object
+          description: Success response containing recognized text.
+        recognizedText:
+          type: string
+          description: The text that was recognized in the PDF.
+        '400':
+          type: object
+          description: Bad Request response.
+        status:
+          type: number
+        errorMessage:
+          type: string
+  securitySchemes:
+    ipaas:
+      type: apiKey
+      in: header
+      name: ipaas
+      x-source: https://docs.0codekit.com/main/api-keys/

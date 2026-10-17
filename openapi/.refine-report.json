@@ -1,0 +1,22 @@
+{
+  "provider": "0codekit",
+  "sources": [
+    "_ae-authored/0codekit-openapi-generated.yml"
+  ],
+  "outputs": [
+    "0codekit-ai-api-openapi.yml",
+    "0codekit-docs-api-openapi.yml",
+    "0codekit-image-api-openapi.yml",
+    "0codekit-mcp-api-openapi.yml",
+    "0codekit-pdf-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "0codekit-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+5 apis, 6 total)"
+  ],
+  "skipped": []
+}

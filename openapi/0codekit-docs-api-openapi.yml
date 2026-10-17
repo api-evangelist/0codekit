@@ -1,0 +1,71 @@
+openapi: 3.2.0
+info:
+  title: relyon Docs API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 7 operation(s) read from 15 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; relyon has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 7
+    pages-with-code: 0
+    pages-read: 15
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.0codekit.com/api/mcp-get
+  - https://docs.0codekit.com/api/docs-get
+  - https://docs.0codekit.com/api/mcp-list-get
+  - https://docs.0codekit.com/api/mcp-call-post
+  - https://docs.0codekit.com/api/mcp-info-post
+  - https://docs.0codekit.com/api/pdf-html-post
+  - https://docs.0codekit.com/api/ai-pdfocr-post
+  - https://docs.0codekit.com/api/pdf-count-post
+  - https://docs.0codekit.com/api/pdf-merge-post
+  - https://docs.0codekit.com/api/pdf-split-post
+  - https://docs.0codekit.com/api/image-blur-post
+  - https://docs.0codekit.com/api/image-crop-post
+  - https://docs.0codekit.com/api/image-exif-post
+  - https://docs.0codekit.com/api/image-flip-post
+  - https://docs.0codekit.com/api/image-html-post
+security:
+- ipaas: []
+tags:
+- name: Docs
+paths:
+  /docs:
+    get:
+      operationId: get_docs
+      tags:
+      - Docs
+      summary: 'DEPRECATED: Get OpenAPI documentation'
+      description: This endpoint is deprecated, please use /openapi.json instead.
+      x-source: https://docs.0codekit.com/api/docs-get
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetDocsResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetDocsResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success
+        '400':
+          type: string
+          description: Bad Request
+  securitySchemes:
+    ipaas:
+      type: apiKey
+      in: header
+      name: ipaas
+      x-source: https://docs.0codekit.com/main/api-keys/
