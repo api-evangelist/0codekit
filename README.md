@@ -64,5 +64,126 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-relyon is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog) and added to the network as a stub for full-pipeline profiling.
-- https://0codekit.com/
+Relyon, operating under the brand 0CodeKit, offers a low‑code and no‑code platform enabling users to convert PDFs, execute code snippets, and integrate AI services without extensive programming. The suite includes PDF conversion, OCR, code execution in Python and JavaScript, image manipulation, and transcription tools, targeting tech‑savvy professionals and developers seeking rapid prototyping and automation.
+
+**Areas:** Company · Low-Code · No-Code · PDF Tools · AI Integration
+
+## relyon on APIs.io
+
+Everything profiled for relyon is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/0codekit/](https://apis.io/providers/0codekit/)** — or go straight to one of the APIs or properties below.
+
+### APIs (6)
+
+- [0CodeKit API](https://apis.io/apis/0codekit/0codekit-api-2/) — API for 0CodeKit low-code platform
+- [relyon AI API](https://apis.io/apis/0codekit/0codekit-ai-api/) — The Ai API from relyon — 1 operation(s) for ai.
+- [relyon Docs API](https://apis.io/apis/0codekit/0codekit-docs-api/) — The Docs API from relyon — 1 operation(s) for docs.
+- [relyon Image API](https://apis.io/apis/0codekit/0codekit-image-api/) — The Image API from relyon — 1 operation(s) for image.
+- [relyon MCP API](https://apis.io/apis/0codekit/0codekit-mcp-api/) — The Mcp API from relyon — 3 operation(s) for mcp.
+- [relyon PDF API](https://apis.io/apis/0codekit/0codekit-pdf-api/) — The Pdf API from relyon — 1 operation(s) for pdf.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetDocsResponse](https://apis.io/schemas/0codekit/0codekit-get-docs-response/)
+- [GetMcpListResponse](https://apis.io/schemas/0codekit/0codekit-get-mcp-list-response/)
+- [PostAiPdfocrResponse](https://apis.io/schemas/0codekit/0codekit-post-ai-pdfocr-response/)
+- [PostImageImageidRequest](https://apis.io/schemas/0codekit/0codekit-post-image-imageid-request/)
+- [PostPdfPdfidRequest](https://apis.io/schemas/0codekit/0codekit-post-pdf-pdfid-request/)
+- [PostPdfPdfidResponse](https://apis.io/schemas/0codekit/0codekit-post-pdf-pdfid-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [0Codekit Context](https://apis.io/jsonld/0codekit/0codekit-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [relyon API Rules](https://apis.io/rules/0codekit/0codekit-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [0Codekit Authentication](https://apis.io/security/0codekit/0codekit-authentication/)
+- [0Codekit Domain Security](https://apis.io/security/0codekit/0codekit-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [0Codekit Plans Pricing](https://apis.io/plans/0codekit/0codekit-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.0codekit.com/)
+- [Documentation](https://docs.0codekit.com/)
+- [Getting started](https://docs.0codekit.com/category/getting-started/)
+- [Pricing](https://www.0codekit.com/pricing)
+- [Support](https://www.0codekit.com/support)
+- [Blog](https://www.0codekit.com/blog)
+- [Terms of service](https://www.0codekit.com/legal/terms-of-use)
+- [Privacy policy](https://www.0codekit.com/legal/privacy-policy)
+- [GitHub](https://github.com/0codekit)
+
+## API Evangelist rating
+
+**Kin Score 41.4** — developing · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 24.4 |
+| Contract governance | 35.6 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 76.3 |
+
+**Agent readiness 15.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/0codekit/](https://apis.io/providers/0codekit/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for relyon: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/0codekit/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
